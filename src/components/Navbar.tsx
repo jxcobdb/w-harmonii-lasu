@@ -28,7 +28,7 @@ export default function Navbar() {
 
 
   return (
-    <>
+    <section className="w-full">
       {/* NAVBAR */}
       <nav
         className={[
@@ -109,7 +109,7 @@ export default function Navbar() {
       <div
         id="site-overlay"
         className={[
-          "absolute left-0 right-0 top-[80px] z-40 h-screen",
+          "fixed left-0 right-0 top-[80px] z-40 h-screen",
           "transition-opacity duration-500 ease-in-out",
           isOpen
             ? "opacity-100 pointer-events-auto"
@@ -158,6 +158,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
