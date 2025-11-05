@@ -1,5 +1,5 @@
 .vertical-carousel-section {
-    background-image: url('public/images/vertical-carousel-background.png');
+    background-image: url('/images/vertical-carousel-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
