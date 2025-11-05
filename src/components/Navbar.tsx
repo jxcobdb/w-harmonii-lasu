@@ -57,7 +57,7 @@ export default function Navbar() {
                 Rezerwacja
               </p>
               <img
-                src="src/assets/icons/menu-burger-icon.svg"
+                src="public/icons/menu-burger-icon.svg"
                 alt="Menu"
                 className="h-5 w-5"
               />
@@ -67,7 +67,7 @@ export default function Navbar() {
 
         <a className="justify-self-center inline-flex duration-300 hover:scale-110">
           <img
-            src="src/assets/icons/brand-logo.svg"
+            src="public/icons/brand-logo.svg"
             alt="Logo"
             className={[
               "h-10 w-auto transition-transform duration-500 ease-in-out",
@@ -86,7 +86,7 @@ export default function Navbar() {
             {!isOpen ? (
               <>
                 <img
-                  src="src/assets/icons/menu-burger-icon.svg"
+                  src="public/icons/menu-burger-icon.svg"
                   alt="Menu"
                   className="h-5 w-5 scale-x-[-1]"
                 />
@@ -96,7 +96,7 @@ export default function Navbar() {
               </>
             ) : (
               <img
-                src="src/assets/icons/closing-x.svg"
+                src="public/icons/closing-x.svg"
                 alt="Close"
                 className="h-5 w-5"
               />
@@ -146,7 +146,7 @@ export default function Navbar() {
                 style={{ transitionDelay: isOpen ? `${i * 0.06}s` : "0s" }}
               >
                 <img
-                  src="src/assets/images/navbar/rezerwacja.png"
+                  src="public/images/navbar/rezerwacja.png"
                   alt="Rezerwacje"
                   className="absolute inset-0 w-full h-full object-cover duration-700 grayscale group-hover:grayscale-0"
                 />

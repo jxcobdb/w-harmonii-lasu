@@ -74,7 +74,7 @@ export default function VerticalCardsStack() {
                                 {[...Array(6)].map((_, i) => (
                                     <SwiperSlide key={i}>
                                         <img
-                                            src="src/assets/images/vertical-carousel/vertical-carousel-slide-1.png"
+                                            src="public/images/vertical-carousel/vertical-carousel-slide-1.png"
                                             alt={`slide-${i}`}
                                             className="w-[86vw] md:w-[700px] h-auto rounded-md"
                                         />
