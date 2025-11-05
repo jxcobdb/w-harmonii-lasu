@@ -1,0 +1,14 @@
+<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_163_2152" fill="white">
+<path d="M0 0H24V3.5H0V0Z"/>
+</mask>
+<path d="M0 0V4H24V0V-4H0V0Z" fill="white" mask="url(#path-1-inside-1_163_2152)"/>
+<mask id="path-3-inside-2_163_2152" fill="white">
+<path d="M0 9H18V12.5H0V9Z"/>
+</mask>
+<path d="M0 9V13H18V9V5H0V9Z" fill="white" mask="url(#path-3-inside-2_163_2152)"/>
+<mask id="path-5-inside-3_163_2152" fill="white">
+<path d="M0 18H12V21.5H0V18Z"/>
+</mask>
+<path d="M0 18V22H12V18V14H0V18Z" fill="white" mask="url(#path-5-inside-3_163_2152)"/>
+</svg>
