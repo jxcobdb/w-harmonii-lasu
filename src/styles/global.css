@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* === Onest (variable) === */
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Noto Serif Display (variable normal + italic) === */
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url("/fonts/NotoSerifDisplay/NotoSerifDisplay-VariableFont_wdth,wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url("/fonts/NotoSerifDisplay/NotoSerifDisplay-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-brand-sans: "Onest", system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-brand-serif: "Noto Serif Display", ui-serif, Georgia, "Times New Roman",
+    Times, serif;
+
+  /* Ustaw Onest jako font-sans (czyli domyślny w Tailwindzie) */
+  --font-sans: var(--font-brand-sans);
+  --font-serif: var(--font-brand-serif);
+  /* === WHITE === */
+  --color-*: initial;
+  --color-brand-white-100: #ffffff;
+  --color-brand-white-125: #f3efe6;
+  --color-brand-white-150: #c2b8a1;
+  --color-brand-white-200: #786539;
+
+  /* === GREY === */
+  --color-brand-grey-50: #ededec;
+  --color-brand-grey-100: #c2c0bc;
+  --color-brand-grey-200: #908d89;
+  --color-brand-grey-300: #5b5a57;
+  --color-brand-grey-350: #4e4d4b;
+  --color-brand-grey-400: #343434;
+
+  /* === GREEN === */
+  --color-brand-green-100: #c6dc71;
+  --color-brand-green-125: #819047;
+  --color-brand-green-150: #4d5727;
+
+  /* === DARK GREEN === */
+  --color-brand-dark-green-50: #344026;
+  --color-brand-dark-green-100: #1c2413;
+  --color-brand-dark-green-125: #121a09;
+
+  /* === BLACK === */
+  --color-brand-black-50: #272725;
+  --color-brand-black-100: #1a1a19;
+  --color-brand-black-150: #0d0d0c;
+  /* === Container === */
+  --container-max-width: 1650px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-white-125);
+  scroll-behavior: smooth;
+}
+
+button,
+a {
+  cursor: pointer;
+}

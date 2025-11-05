@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ScrolledSection from "../components/ScrolledSection.astro";
+import VerticalCarousel from "../components/VerticalCarousel/VerticalCarousel";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+type Slide = { src: string; alt?: string; caption?: string };
+
+const slides: Slide[] = [
+  {
+    src: "src/assets/images/home-welcome.png",
+    alt: "Leśna ścieżka",
+    caption: "Spacer po lesie",
+  },
+  {
+    src: "src/assets/images/home-welcome.png",
+    alt: "Leśna ścieżka",
+    caption: "Spacer po lesie",
+  },
+  {
+    src: "src/assets/images/home-welcome.png",
+    alt: "Leśna ścieżka",
+    caption: "Spacer po lesie",
+  },
+  {
+    src: "src/assets/images/home-welcome.png",
+    alt: "Leśna ścieżka",
+    caption: "Spacer po lesie",
+  },
+];
+---
+
+<Layout>
+  <Header variant={1} />
+  <section id='welcome' class='relative overflow-hidden scroll-mt-[80px]'>
+    <div
+      class='absolute max-w-[504px] h-fit top-[150px] left-[calc((-260px+(7vw)))] 2xl:block hidden'
+    >
+      <img
+        src='src/assets/images/home-welcome-L.png'
+        alt='Forest Scene'
+        class='grayscale-100'
+      />
+      <div class='absolute inset-0 z-0 bg-brand-grey-350/70'></div>
+    </div>
+    <div
+      class='absolute max-w-[504px] h-fit top-[150px] right-[calc((-260px+(7vw)))] 2xl:block hidden'
+    >
+      <img
+        src='src/assets/images/home-welcome-R.png'
+        alt='Forest Scene'
+        class='grayscale-100'
+      />
+      <div class='absolute inset-0 z-0 bg-brand-grey-350/70'></div>
+    </div>
+
+    <div class='px-5 py-20'>
+      <h1
+        class='text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] text-center font-brand-serif italic font-semibold mb-10 lg:mb-16'
+      >
+        Witaj <span class='text-brand-green-125'>W&nbsp;Harmonii Lasu</span>
+      </h1>
+      <div class='mx-auto max-w-[720px] h-auto'>
+        <img
+          src='src/assets/images/home-welcome.png'
+          alt='Forest Scene'
+          class=''
+        />
+        <p class='text-md font-light py-5'>
+          To miejsce powstało z myślą o tym , żebyś mógł odetchnąć od
+          codzienności, zebrać myśli i rozwijać swoje pasje. Rozgość się, poczuj
+          harmonię lasu, zjedz coś dobrego i pozwól sobie zwolnić w ciszy,
+          spokoju i bliskości natury.<br /><span class='text-brand-green-125'
+            >Do zobaczenia w lesie!</span
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+  <ScrolledSection />
+  <VerticalCarousel client:only />
+</Layout>

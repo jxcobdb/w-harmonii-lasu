@@ -1,0 +1,167 @@
+---
+import ShowMore from "../components/ShowMore.tsx";
+
+const attraction = [
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-1.png",
+    imgAlt: "Atrakcja 1",
+    title: "Leśna Medytacja",
+    description:
+      "Zanurz się w ciszy lasu podczas prowadzonej medytacji, która pozwoli Ci odnaleźć wewnętrzny spokój.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-2.png",
+    imgAlt: "Atrakcja 2",
+    title: "Sauna nad Rzeką",
+    description:
+      "Rozgrzej ciało w saunie, a następnie schłódź się w krystalicznie czystej rzece.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-3.png",
+    imgAlt: "Atrakcja 3",
+    title: "Relaks w Hamaku",
+    description:
+      "Odpocznij w hamaku nad stawem, wsłuchując się w dźwięki natury.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-4.png",
+    imgAlt: "Atrakcja 4",
+    title: "Ognisko pod Gwiazdami",
+    description: "Spędź wieczór przy ognisku, podziwiając rozgwieżdżone niebo.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-5.png",
+    imgAlt: "Atrakcja 5",
+    title: "Leśne Kąpiele",
+    description:
+      "Doświadcz terapeutycznych kąpieli leśnych, które odprężą Twoje ciało i umysł.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-6.png",
+    imgAlt: "Atrakcja 6",
+    title: "Wycieczki Rowerowe",
+    description: "Odkrywaj malownicze trasy rowerowe w otoczeniu natury.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-7.png",
+    imgAlt: "Atrakcja 7",
+    title: "Kajaki na Rzece",
+    description:
+      "Przeżyj przygodę na wodzie, pływając kajakiem po spokojnej rzece.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-8.png",
+    imgAlt: "Atrakcja 8",
+    title: "Warsztaty Rozwojowe",
+    description:
+      "Weź udział w warsztatach, które pomogą Ci rozwijać swoje pasje i umiejętności.",
+  },
+  {
+    imgSrc: "src/assets/images/scroll-section/scroll-section-9.png",
+    imgAlt: "Atrakcja 9",
+    title: "Boisko w Naturze",
+    description: "Zagraj w ulubioną grę na boisku otoczonym zielenią.",
+  },
+];
+---
+
+<section class='bg-brand-dark-green-50'>
+  <div
+    class='mx-auto max-w-[var(--container-max-width)] px-[40px] py-16 md:py-24'
+  >
+    <div class='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 xl:gap-30'>
+      <!-- LEWA KOLUMNA (STICKY) -->
+      <aside
+        class='lg:sticky md:top-30 xl:top-30 self-start w-full lg:max-w-[700px]'
+      >
+        <h1
+          class='font-brand-serif text-center lg:text-left text-brand-white-100 text-[45px] xl:text-[60px] leading-tight tracking-[-0.01em]'
+        >
+          Atrakcje, które <em class='italic text-brand-green-100'>umilą</em> Ci wypoczynek
+        </h1>
+
+        <p
+          class='mt-6 font-brand-sans text-center lg:text-left font-semibold text-brand-white-100 text-[20px] leading-snug'
+        >
+          Relaks to nie tylko leżenie. To robienie tego, czego naprawdę
+          potrzebujesz!
+        </p>
+
+        <ShowMore breakpoint='lg' className='text-center lg:hidden' client:only>
+          <div class='mt-5 space-y-4'>
+            <p
+              class='font-brand-sans text-center lg:text-left text-brand-white-100/90 text-[14px] xl:text-[15px] leading-relaxed'
+            >
+              W „Harmonii lasu” wierzymy, że prawdziwy relaks to coś więcej niż
+              leżenie w hamaku (choć u nas możesz i to robić godzinami). To czas
+              spędzony w zgodzie ze sobą – czas, który nie musi być zaplanowany,
+              ale może być wypełniony tym, co Ci służy. Na miejscu czeka na
+              Ciebie wiele możliwości – bez pośpiechu, bez presji, w rytmie
+              natury. Możesz zanurzyć się w leśnej ciszy podczas kąpieli leśnych
+              lub prowadzonej medytacji, rozgrzać ciało w saunie i schłodzić się
+              w rzece, odpocząć w hamaku nad stawem albo zorganizować ognisko
+              pod gwiazdami. Dla aktywnych są rowery, spacery, boisko, kajaki, a
+              dla tych, którzy chcą głębiej – sesje terapeutyczne i warsztaty
+              rozwojowe.
+            </p>
+
+            <p
+              class='font-brand-sans text-center lg:text-left text-brand-white-100/90 text-[14px] xl:text-[15px] leading-relaxed'
+            >
+              Tu nie musisz wybierać pomiędzy odpoczynkiem, a aktywnością.
+              Możesz żyć prosto i dobrze – tak, jak Ci odpowiada.
+            </p>
+
+            <p
+              class='font-brand-sans text-center lg:text-left text-brand-white-100/90 text-[14px] xl:text-[15px] leading-relaxed'
+            >
+              U nas spędzisz czas tak, jak lubisz: aktywnie, twórczo albo bardzo
+              leniwie.
+            </p>
+
+            <p
+              class='font-brand-sans text-center lg:text-left text-brand-white-100/90 text-[14px] xl:text-[15px] leading-relaxed'
+            >
+              W harmonii z naturą i z samym sobą – nasze atrakcje zapewnią ucztę
+              dla ciała, dla duszy, dla zmysłów.
+            </p>
+          </div>
+        </ShowMore>
+        <div class='text-center lg:text-left'>
+          <a
+            href='#kontakt'
+            class='group mt-8 inline-flex items-center gap-2 font-brand-sans text-brand-white-100 text-[18px] underline decoration-transparent hover:decoration-brand-white-100 transition'
+          >
+            Zapytaj o szczegóły
+            <img
+              src='src/assets/icons/arrow-corner.svg'
+              alt='Arrow Right'
+              class='w-4 h-4 group-hover:-rotate-45 transition-transform'
+            />
+          </a>
+        </div>
+      </aside>
+
+      <!-- PRAWA KOLUMNA (SCROLLOWANA ZAWARTOŚĆ) -->
+      <div class='flex flex-col gap-12 lg:gap-20 justify-center items-center'>
+        {
+          attraction.map((item) => (
+            <div class='inline-flex flex-col justify-center lg:justify-start items-center lg:items-start text-center lg:text-left max-w-[600px] lg:max-w-full'>
+              <img
+                src={item.imgSrc}
+                alt={item.imgAlt}
+                class='rounded-none object-cover mb-4'
+              />
+              <h3 class='font-brand-sans text-brand-white-100  text-[22px] font-semibold mb-2'>
+                {item.title}
+              </h3>
+              <p class='font-brand-sans text-brand-white-100/90 text-[15px] leading-relaxed'>
+                {item.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

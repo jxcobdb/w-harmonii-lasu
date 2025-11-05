@@ -1,0 +1,42 @@
+.vertical-carousel-section {
+    background-image: url('src/assets/images/vertical-carousel-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.swiper-slide-next {
+    opacity: 0;
+}
+
+.swiper-slide-prev,
+.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-slide-3rd-prev {
+    opacity: 0.5;
+}
+
+.swiper-slide img {
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.swiper-slide-active img {
+    filter: grayscale(0%) !important;
+}
+
+@media (max-width: 560px) {
+    .swiper-slide {
+        width: 89vw;
+    }
+}

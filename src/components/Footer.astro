@@ -1,0 +1,128 @@
+<section
+  class='w-full relative'
+  style="background-image: url('src/assets/images/footer_bg.png'); background-size: cover; background-position: center;"
+>
+  <div
+    class='absolute inset-0 z-0 bg-gradient-to-b from-brand-grey-400 to-brand-grey-400/40'
+  >
+  </div>
+  <div class='mx-auto max-w-[1200px] py-12 md:py-16 z-10 relative px-4'>
+    <!-- 3 kolumny: kontakt | logo | formularz -->
+    <div
+      class='grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-20 md:gap-16 items-center'
+    >
+      <!-- Lewa: kontakt -->
+      <div class='text-brand-white-100 text-center space-y-6 md:max-w-60'>
+        <p class='text-shadow-lg'>Stara Brda 1<br />77-220 Stara Brda</p>
+        <p class='text-shadow-lg'>Pomorskie, Polska</p>
+        <div class='flex items-center justify-center gap-2'>
+          <img src='src/assets/icons/telephone_ico.svg' alt='telephone_ico' />
+          <a
+            href='tel:+48503147366'
+            class='hover:underline duration-200 text-shadow-lg'>503 147 366</a
+          >
+        </div>
+        <div class='flex items-center justify-center gap-2'>
+          <img src='src/assets/icons/mail_ico.svg' alt='mail_ico' />
+          <a
+            href='mailto:wharmoniilasu@gmail.com'
+            class='hover:underline duration-200 text-shadow-lg'
+            >wharmonii.lasu@gmail.com
+          </a>
+        </div>
+        <div class='flex items-center justify-center gap-10'>
+          <a href='#' class='hover:scale-110 duration-300'>
+            <img src='src/assets/icons/facebook_ico.svg' alt='mail_ico' />
+          </a>
+          <a href='#' class='hover:scale-110 duration-300'>
+            <img src='src/assets/icons/instagram_ico.svg' alt='mail_ico' />
+          </a>
+        </div>
+      </div>
+
+      <!-- Środek: logo -->
+      <div class='flex justify-center'>
+        <img
+          src='src/assets/icons/brand-logo.svg'
+          alt='w harmonii lasu'
+          class='h-18 lg:h-23 w-auto'
+        />
+      </div>
+
+      <!-- Prawa: formularz -->
+      <div class='w-full md:justify-self-end'>
+        <form class='w-full md:max-w-[300px] ml-auto space-y-3'>
+          <input
+            type='email'
+            name='email'
+            required
+            placeholder='Adres e-mail *'
+            class='w-full bg-brand-grey-350/30 border-3 border-brand-white-100/30 focus:border-brand-white-100/50 outline-none text-brand-white-100 placeholder-brand-white-100/70 px-4 py-3 text-sm tracking-wide'
+          />
+          <input
+            type='text'
+            name='name'
+            required
+            placeholder='Imię i nazwisko'
+            class='w-full bg-brand-grey-350/30 border-3 border-brand-white-100/30 focus:border-brand-white-100/50 outline-none text-brand-white-100 placeholder-brand-white-100/70 px-4 py-3 text-sm tracking-wide'
+          />
+          <input
+            type='tel'
+            name='phone'
+            placeholder='Telefon'
+            class='w-full bg-brand-grey-350/30 border-3 border-brand-white-100/30 focus:border-brand-white-100/50 outline-none text-brand-white-100 placeholder-brand-white-100/70 px-4 py-3 text-sm tracking-wide'
+          />
+          <textarea
+            name='message'
+            rows={4}
+            placeholder='Wiadomość'
+            class='w-full bg-brand-grey-350/30 border-3 border-brand-white-100/30 focus:border-brand-white-100/50 outline-none text-brand-white-100 placeholder-brand-white-100/70 px-4 py-3 text-sm tracking-wide resize-none'
+          ></textarea>
+          <div class='text-center'>
+            <button
+              type='submit'
+              class='uppercase items-center justify-center tracking-widest px-6 py-3 text-xs md:text-sm font-semibold bg-brand-green-125 text-brand-white-100 hover:scale-[1.02] hover:bg-brand-green-150 active:scale-[0.99] transition-all duration-300'
+            >
+              WYŚLIJ FORMULARZ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dolna belka -->
+  <div class='w-full bg-brand-grey-350/70 py-7 z-10 relative'>
+    <div
+      class='mx-auto max-w-[1200px] align-middle h-full flex flex-col md:flex-row items-center gap-6 justify-between px-4'
+    >
+      <!-- lewa -->
+      <div class='flex items-center gap-4 text-brand-white-100/90 text-lg'>
+        <span>&copy; 2023</span>
+        <span class='opacity-80'>w Harmonii Lasu</span>
+      </div>
+
+      <!-- środek -->
+      <div
+        class='flex items-center gap-6 text-[11px] md:text-xs text-brand-white-100/80'
+      >
+        <a href='#' class='hover:underline'>POLITYKA PRYWATNOŚCI</a>
+        <a href='#' class='hover:underline'>REGULAMIN</a>
+      </div>
+
+      <!-- prawa -->
+      <a
+        href='https://webtiles.dev'
+        target='_blank'
+        rel='noopener'
+        class='hover:scale-105 duration-300'
+      >
+        <img
+          src='src/assets/icons/powered_by_webtiles.svg'
+          alt='webtiles_ico'
+          class='w-auto'
+        />
+      </a>
+    </div>
+  </div>
+</section>
