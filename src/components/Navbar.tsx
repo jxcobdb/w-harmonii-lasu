@@ -28,11 +28,11 @@ export default function Navbar() {
 
 
   return (
-    <section className="sticky top-0 z-50 w-full">
+    <>
       {/* NAVBAR */}
       <nav
         className={[
-          "fixed w-full px-[40px] grid items-center transition-all duration-300 ease-in-out",
+          "fixed w-full px-[40px] z-50 grid items-center transition-all duration-300 ease-in-out",
           // 🔹 tło zmienia się przy scrollu
           isScrolled || isOpen
             ? "bg-brand-grey-350/90 h-[80px] backdrop-blur-md shadow-xl"
@@ -158,6 +158,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
