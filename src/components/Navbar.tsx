@@ -1,5 +1,38 @@
 import { useState, useEffect } from "react";
 
+const locations = [
+  {
+    title: "oferta",
+    image: "/images/navbar/oferta.png",
+    href: "/oferta",
+  },
+  {
+    title: "rezerwacja",
+    image: "/images/navbar/rezerwacja.png",
+    href: "/rezerwacja",
+  },
+  {
+    title: "lokalizacja",
+    image: "/images/navbar/lokalizacja.png",
+    href: "/rezerwacja",
+  },
+  {
+    title: "relaks",
+    image: "/images/navbar/relaks.png",
+    href: "/#welcome-carousel",
+  },
+  {
+    title: "atrakcje",
+    image: "/images/navbar/atrakcje.png",
+    href: "/rezerwacja",
+  },
+  {
+    title: "warsztaty",
+    image: "/images/navbar/warsztaty.png",
+    href: "/#workshops",
+  },
+];
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +58,6 @@ export default function Navbar() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
 
   return (
     <section className="w-full">
@@ -65,7 +97,7 @@ export default function Navbar() {
           )}
         </div>
 
-        <a className="justify-self-center inline-flex duration-300 hover:scale-110">
+        <a href="/" className="justify-self-center inline-flex duration-300 hover:scale-110">
           <img
             src="/icons/brand-logo.svg"
             alt="Logo"
@@ -95,11 +127,7 @@ export default function Navbar() {
                 </p>
               </>
             ) : (
-              <img
-                src="/icons/closing-x.svg"
-                alt="Close"
-                className="h-5 w-5"
-              />
+              <img src="/icons/closing-x.svg" alt="Close" className="h-5 w-5" />
             )}
           </button>
         </div>
@@ -134,24 +162,25 @@ export default function Navbar() {
               "lg:grid-rows-2 lg:h-full",
             ].join(" ")}
           >
-            {Array.from({ length: 6 }).map((_, i) => (
+            {locations.map((location, index) => (
               <a
-                href="/"
-                key={i}
+                href={location.href}
+                key={location.title}
                 className={[
                   "relative w-full overflow-hidden group",
                   "transition-all duration-300",
                   "aspect-[4/3] lg:aspect-auto lg:h-full",
                 ].join(" ")}
-                style={{ transitionDelay: isOpen ? `${i * 0.06}s` : "0s" }}
+                style={{ transitionDelay: isOpen ? `${index * 0.06}s` : "0s" }}
+                onClick={() => setIsOpen(false)}
               >
                 <img
-                  src="/images/navbar/rezerwacja.png"
-                  alt="Rezerwacje"
+                  src={location.image}
+                  alt={location.title}
                   className="absolute inset-0 w-full h-full object-cover duration-700 grayscale group-hover:grayscale-0"
                 />
-                <h3 className="absolute inset-0 grid place-items-center text-brand-white-100 font-brand-sans font-semibold uppercase text-[28px] tracking-[2px] transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)]">
-                  Rezerwacja
+                <h3 className="absolute inset-0 grid place-items-center text-brand-white-100 font-brand-sans font-semibold uppercase text-[24px] tracking-[2px] transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)] text-center px-4">
+                  {location.title}
                 </h3>
               </a>
             ))}

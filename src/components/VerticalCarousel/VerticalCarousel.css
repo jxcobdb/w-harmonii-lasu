@@ -1,42 +1,42 @@
 .vertical-carousel-section {
-    background-image: url('/images/vertical-carousel-background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("/images/vertical-carousel-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    opacity: 0;
-    transition: all 1s ease;
+#vertical-carousel .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: all 1s ease;
 }
 
-.swiper-slide-next {
-    opacity: 0;
+#vertical-carousel .swiper-slide-next {
+  opacity: 0;
 }
 
-.swiper-slide-prev,
-.swiper-slide-active {
-    opacity: 1;
+#vertical-carousel .swiper-slide-prev,
+#vertical-carousel .swiper-slide-active {
+  opacity: 1;
 }
 
-.swiper-slide-3rd-prev {
-    opacity: 0.5;
+#vertical-carousel .swiper-slide-3rd-prev {
+  opacity: 0.5;
 }
 
-.swiper-slide img {
-    display: block;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
+#vertical-carousel .swiper-slide img {
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
 }
 
-.swiper-slide-active img {
-    filter: grayscale(0%) !important;
+#vertical-carousel .swiper-slide-active img {
+  filter: grayscale(0%) !important;
 }
 
 @media (max-width: 560px) {
-    .swiper-slide {
-        width: 89vw;
-    }
+  #vertical-carousel .swiper-slide {
+    width: 89vw;
+  }
 }

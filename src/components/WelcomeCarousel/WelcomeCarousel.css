@@ -1,0 +1,25 @@
+/* Welcome Carousel Styles */
+
+#welcome-carousel .swiper-slide {
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.6s ease;
+}
+
+#welcome-carousel .swiper-slide img {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  filter: grayscale(100);
+}
+
+#welcome-carousel .swiper-slide-active img,
+#welcome-carousel .swiper-slide-duplicate-active img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+#welcome-carousel .swiper {
+  height: auto !important;
+}

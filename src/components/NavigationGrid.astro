@@ -1,0 +1,57 @@
+---
+const NAV_LINKS = [
+  {
+    title: "oferta",
+    image: "/images/navbar/oferta.png",
+    href: "/oferta",
+  },
+  {
+    title: "rezerwacja",
+    image: "/images/navbar/rezerwacja.png",
+    href: "/rezerwacja",
+  },
+  {
+    title: "lokalizacja",
+    image: "/images/navbar/lokalizacja.png",
+    href: "/rezerwacja",
+  },
+  {
+    title: "relaks",
+    image: "/images/navbar/relaks.png",
+    href: "/#welcome-carousel",
+  },
+  {
+    title: "atrakcje",
+    image: "/images/navbar/atrakcje.png",
+    href: "/rezerwacja",
+  },
+  {
+    title: "warsztaty",
+    image: "/images/navbar/warsztaty.png",
+    href: "/#workshops",
+  },
+];
+---
+
+<div class=''>
+  <div class='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'>
+    {
+      NAV_LINKS.map((link) => (
+        <a
+          href={link.href}
+          class='group block relative border-1 border-brand-grey-400 lg:border-0'
+        >
+          <img
+            src={link.image}
+            alt={link.title}
+            class='w-full h-auto object-cover transition-transform duration-300 grayscale-100 group-hover:grayscale-0'
+          />
+          <div class='bg-brand-grey-400/70 absolute inset-0 w-full h-full z-10 opacity-100 group-hover:opacity-40 duration-300' />
+          <h3 class='absolute inset-0 grid place-items-center text-brand-white-100 font-brand-sans font-semibold uppercase text-[12px] sm:text-[16px] tracking-[2px] transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)] text-center px-4 z-20'>
+            {link.title}
+          </h3>
+        </a>
+      ))
+    }
+  </div>
+</div>

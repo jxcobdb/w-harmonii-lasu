@@ -81,3 +81,33 @@ button,
 a {
   cursor: pointer;
 }
+
+.list-with-icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-with-icon li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.list-with-icon li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12%;
+  width: 1rem;
+  height: 1rem;
+  background: url("/icons/unordered-list-icon.svg") no-repeat center;
+  background-size: contain;
+}
+
+@media (width<=640px) {
+  .list-with-icon li {
+    font-size: 14px;
+  }
+}
