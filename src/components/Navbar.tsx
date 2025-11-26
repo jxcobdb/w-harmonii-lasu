@@ -14,7 +14,7 @@ const locations = [
   {
     title: "lokalizacja",
     image: "/images/navbar/lokalizacja.png",
-    href: "/rezerwacja",
+    href: "/#map-section",
   },
   {
     title: "relaks",
@@ -24,7 +24,7 @@ const locations = [
   {
     title: "atrakcje",
     image: "/images/navbar/atrakcje.png",
-    href: "/rezerwacja",
+    href: "/atrakcje",
   },
   {
     title: "warsztaty",

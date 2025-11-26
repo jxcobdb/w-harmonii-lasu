@@ -1,0 +1,50 @@
+/* bazowy wygląd wszystkich slajdów */
+
+.SubpageCarousel .swiper-slide,
+.SubpageCarousel .swiper-slide.swiper-slide-prev {
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+/* 1. widoczny (technicznie swiper-slide-active) – traktujemy go jak "prev" */
+.SubpageCarousel .swiper-slide.swiper-slide-active {
+    opacity: 0.6;
+    transform: scale(0.6);
+    translate: 50px;
+}
+
+/* 2. widoczny – chcemy, żeby był NASZYM "aktywnym" */
+.SubpageCarousel .swiper-slide.swiper-slide-active+.swiper-slide {
+    opacity: 1;
+    transform: scale(1);
+    /* tu robisz efekt "active" */
+}
+
+/* 3. widoczny – nasz "next" */
+.SubpageCarousel .swiper-slide.swiper-slide-active+.swiper-slide+.swiper-slide {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.SubpageCarousel .swiper-slide.swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide {
+    opacity: 0.6;
+    transform: scale(0.6);
+    translate: -50px;
+}
+
+@media (max-width: 1024px) {
+    .SubpageCarousel .swiper-slide.swiper-slide-active+.swiper-slide+.swiper-slide {
+        opacity: 0.6;
+        transform: scale(0.6);
+        translate: -50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .SubpageCarousel .swiper-slide.swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+        translate: 0;
+    }
+}

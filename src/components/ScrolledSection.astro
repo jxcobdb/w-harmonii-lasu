@@ -68,7 +68,15 @@ const attraction = [
 ];
 ---
 
-<section class='bg-brand-dark-green-50'>
+<section
+  class='bg-brand-dark-green-50'
+  style={{
+    backgroundImage: 'url("/images/backgrounds/pattern_atrakcje.png")',
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  }}
+>
   <div
     class='mx-auto max-w-[var(--container-max-width)] px-[40px] py-16 md:py-24'
   >
@@ -132,10 +140,10 @@ const attraction = [
         </ShowMore>
         <div class='text-center lg:text-left'>
           <a
-            href='#kontakt'
+            href='/rezerwacja'
             class='group mt-8 inline-flex items-center gap-2 font-brand-sans text-brand-white-100 text-[24px] underline decoration-transparent hover:decoration-brand-white-100 transition'
           >
-            Zapytaj o szczegóły
+            Zapytaj o szczegóły!
             <img
               src='/icons/arrow-corner.svg'
               alt='Arrow Right'

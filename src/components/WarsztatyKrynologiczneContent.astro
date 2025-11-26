@@ -1,0 +1,208 @@
+---
+import SubpageCarousel from "./SubpageCarousel/SubpageCarousel";
+
+const photos: string[] = [
+    "/images/warsztaty-krynologiczne/karuzela-krynologiczne-1.png",
+    "/images/warsztaty-krynologiczne/karuzela-krynologiczne-2.png",
+    "/images/warsztaty-krynologiczne/karuzela-krynologiczne-3.png",
+    "/images/warsztaty-krynologiczne/karuzela-krynologiczne-4.png",
+];
+---
+
+<section
+    class='bg-brand-white-125 px-[40px] pt-20 md:pt-30 scroll-m-10'
+    id='welcome-carousel'
+    style={{
+        backgroundImage: 'url("/images/backgrounds/pattern_warsztaty.png")',
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+    }}
+>
+    <div
+        class='mx-auto flex max-w-[var(--container-max-width)] flex-col gap-10'
+    >
+        <div class='grid gap-8 lg:grid-cols-2'>
+            {/* LEWA KOLUMNA – TEKST */}
+            <div
+                class='flex flex-col gap-6 transition-opacity duration-300 items-start pr-10'
+            >
+                <h2
+                    class='font-brand-serif font-semibold italic text-[35px] md:text-[50px] lg:text-[55px] xl:text-[70px] text-brand-black-100 text-center lg:text-start w-full'
+                >
+                    Na czym to
+                    <span class='text-brand-green-125'> polega?</span>
+                </h2>
+
+                <div class='flex flex-col gap-3 lg:text-left text-center'>
+                    <h3
+                        class='font-onest font-semibold text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] text-brand-black-50 mb-5'
+                    >
+                        Przestrzeń dla człowieka i psa – w naturalnej harmonii
+                    </h3>
+
+                    <p
+                        class='lg:text-[16px] xl:text-[18px] leading-relaxed text-brand-grey-350 font-semibold'
+                    >
+                        <span class='text-brand-green-125'
+                            >Nasze miejsce to ośrodek dla opiekunów i ich
+                            czworonogów</span
+                        >
+                        – cenisz swobodę, duży teren, kontakt ze zwierzęciem i pracę
+                        w naturze? Prowadzisz szkolenia, psie terapie, konsultacje
+                        behawioralne, tropienie, mantrailing lub zawody? U nas jest
+                        na to przestrzeń..
+                    </p>
+                </div>
+
+                <div class='mt-6 flex flex-col gap-5'>
+                    <h4
+                        class='font-onest font-semibold text-brand-black-50 md:text-[18px] lg:text-[20px] xl:text-[24px]'
+                    >
+                        Naszym gościom oferujemy:
+                    </h4>
+
+                    <ul class='list-dots'>
+                        <li>
+                            Ośrodek na wyłączność - położony w sercu sosnowego
+                            lasu nad rzeką Brdą.
+                        </li>
+                        <li>
+                            Brak innych zabudowań i cywilizacji w promieniu
+                            kilku kilometrów z dala od bodźców i hałasu.
+                        </li>
+                        <li>
+                            Położenie na skrzyżowaniu kilku dróg leśnych, co
+                            oferuje niesamowitą przestrzeń do spacerów i
+                            treningów.
+                        </li>
+                        <li>12 pokoi z łazienkami (2-4 osobowe)</li>
+                        <li>
+                            Zamkniętą salkę szkoleniowo-treningową (ok. 60 m²) w
+                            razie niepogody
+                        </li>
+                        <li>Całodobowe domowe wyżywienie</li>
+                        <li>Ogrodzony teren treningowy (ok. 100 m²)</li>
+                        <li>
+                            Kuchnię do przygotowania dodatkowych posiłków dla
+                            siebie i psów
+                        </li>
+                        <li>Ponad 2 ha terenu agroturystyki do dyspozycji</li>
+                        <li>
+                            Zamrażarkę do przechowywania mięsa dla czworonogów
+                        </li>
+                        <li>
+                            Rozległą łąkę tuż za ogrodzeniem do pracy na
+                            większej przestrzeni
+                        </li>
+                        <li>Sprawny internet</li>
+                        <li>
+                            Otwartość i przyjazne nastawienie do czworonogów
+                        </li>
+                        <li>Wyjątkową saunę nad samą rzeką</li>
+                        <li>
+                            Ponad 10-letnie doświadczenie we współpracy z
+                            klientami i ich psami
+                        </li>
+                        <li>Salkę wykładowo-telewizyjną (ok. 30 m²)</li>
+                        <li>Dostępność fotografa psów w pracy i na sesji</li>
+                        <li>
+                            Przestronny taras i wiata do zajęć teoretycznych i
+                            wieczornych spotkań
+                        </li>
+                    </ul>
+                </div>
+
+                <p
+                    class='lg:text-[16px] xl:text-[18px] leading-relaxed text-brand-grey-350 font-semibold'
+                >
+                    Jeśli prowadzisz szkolenia, warsztaty mantrailing,
+                    tropienie, nosework, posłuszeństwo, dogtrekking, spotkania
+                    edukacyjne, zajęcia z komunikacji z psem, terapię z udziałem
+                    psa lub inne warsztaty kynologiczne – u nas znajdziesz
+                    odpowiednie warunki.
+                </p>
+
+                <div class='mt-6 flex flex-col gap-5'>
+                    <h4
+                        class='font-onest font-semibold text-brand-black-50 md:text-[18px] lg:text-[20px] xl:text-[24px]'
+                    >
+                        Co jeszcze oferujemy organizatorom?
+                    </h4>
+
+                    <ul class='list-dots'>
+                        <li>
+                            Pomoc w organizacji pobytu: zakwaterowanie, posiłki,
+                            przestrzenie
+                        </li>
+                        <li>
+                            Elastyczność godzinowa i życzliwe podejście do
+                            potrzeb grupy
+                        </li>
+                        <li>
+                            Dostęp do sprzętu: rzutnik, ekran, podstawowe
+                            materiały
+                        </li>
+                        <li>
+                            Możliwość zarezerwowania całości tylko dla Twojej
+                            grupy (min. 16 osób)
+                        </li>
+                        <li>
+                            Rabat 10% dla grup powyżej 20 osób lub przy pobytach
+                            powyżej 6 dni.
+                        </li>
+                    </ul>
+                </div>
+                <div class='mt-6 flex flex-col gap-5'>
+                    <h4
+                        class='font-onest font-semibold text-brand-black-50 md:text-[18px] lg:text-[20px] xl:text-[24px]'
+                    >
+                        Chcesz zorganizować swój warsztat?
+                    </h4>
+
+                    <p
+                        class='lg:text-[16px] xl:text-[18px] leading-relaxed text-brand-grey-350 font-semibold'
+                    >
+                        Skontaktuj się z nami – wspólnie dopasujemy terminy,
+                        przestrzeń, wyżywienie i szczegóły
+                        organizacyjne. Jesteśmy tu, by Twoje wydarzenie mogło
+                        się naprawdę zadziać – w zaopiekowaniu, ciszy i
+                        harmonii, w lesie.
+                    </p>
+                </div>
+
+                <a
+                    href='/rezerwacja'
+                    class='mt-6 group inline-flex items-center gap-2 font-brand-sans font-semibold text-brand-black-100 text-[24px] underline decoration-transparent hover:decoration-brand-black-100 transition'
+                >
+                    Zapytaj o szczegóły!
+                    <img
+                        src='/icons/arrow-corner.svg'
+                        alt='Arrow Right'
+                        class='w-4 h-4 group-hover:-rotate-45 transition-transform'
+                        style={{ filter: "brightness(0) saturate(100%)" }}
+                    />
+                </a>
+            </div>
+
+            {/* PRAWA KOLUMNA – ZDJĘCIA */}
+            <div
+                class='flex flex-col justify-start items-center gap-5 lg:gap-20'
+            >
+                <img
+                    src='/images/warsztaty-krynologiczne/krynologiczne-1.png'
+                    alt='Praca z psem w terenie'
+                    class='w-[800px]'
+                    loading='lazy'
+                />
+                <img
+                    src='/images/warsztaty-krynologiczne/krynologiczne-2.png'
+                    alt='Pies odpoczywający na terenie ośrodka'
+                    class='w-[650px]'
+                    loading='lazy'
+                />
+            </div>
+        </div>
+    </div>
+    <SubpageCarousel images={photos} client:only />
+</section>

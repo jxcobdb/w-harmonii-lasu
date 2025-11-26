@@ -40,42 +40,42 @@ const VARIANTS: Record<number, VariantCfg> = {
   3: {
     media: {
       kind: "image",
-      src: "/images/hero-3.jpg",
-      alt: "Strumień wśród drzew",
+      src: "/images/warsztaty-krynologiczne/header-warsztaty-krynologiczne.png",
+      alt: "Warsztaty kynologiczne, które łączą - nie tylko smyczą",
     },
-    title: "Rezerwacje Pobytów",
+    title: "Warsztaty kynologiczne, \nktóre łączą - nie tylko smyczą",
   },
   4: {
     media: {
       kind: "image",
-      src: "/images/hero-4.jpg",
-      alt: "Polana o zachodzie słońca",
+      src: "/images/warsztaty-artystyczne/header-warsztaty-artystyczne.png",
+      alt: "Sztuka zaczyna się tam, gdzie kończy się pośpiech",
     },
-    title: "Strefa Wiedzy",
+    title: "Sztuka zaczyna się tam, \ngdzie kończy się pośpiech",
   },
   5: {
     media: {
       kind: "image",
-      src: "/images/hero-5.jpg",
-      alt: "Mglisty poranek",
+      src: "/images/warsztaty-rozwojowe/header-warsztaty-rozwojowe.png",
+      alt: "Zatrzymaj się. Wsłuchaj się. Wróć do siebie",
     },
-    title: "Przestrzeń Warsztatowa",
+    title: "Zatrzymaj się. Wsłuchaj się. \nWróć do siebie",
   },
   6: {
     media: {
       kind: "image",
-      src: "/images/hero-6.jpg",
-      alt: "Spokojne jezioro",
+      src: "/images/header-atrakcje.png",
+      alt: "Atrakcje",
     },
-    title: "Oferta dla Grup",
+    title: "Atrakcje",
   },
   7: {
     media: {
       kind: "image",
-      src: "/images/hero-7.jpg",
-      alt: "Górska panorama",
+      src: "/images/kajaki/header-kajaki.png",
+      alt: "Kajaki",
     },
-    title: "O nas",
+    title: "Kajaki",
   },
 };
 
@@ -113,7 +113,7 @@ const videoPoster = (cfg.media as any).poster;
       <img
         src={imageFinalSrc}
         alt={imgAlt}
-        class='absolute inset-0 w-full h-full object-cover'
+        class='absolute inset-0 w-full h-full object-cover slowScaleHeaderAnimation'
       />
     )
   }
@@ -125,7 +125,7 @@ const videoPoster = (cfg.media as any).poster;
     class='relative z-10 flex h-full flex-col justify-end items-center text-center pb-20'
   >
     <h1
-      class={`font-brand-serif italic text-3xl md:text-5xl text-brand-white-100 mb-5 whitespace-pre-line`}
+      class={`font-brand-serif font-normal italic text-3xl md:text-5xl leading-14 text-brand-white-100 mb-5 whitespace-pre-line`}
     >
       {H1}
     </h1>

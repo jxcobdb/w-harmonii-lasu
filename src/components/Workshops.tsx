@@ -4,6 +4,7 @@ type WorkshopVariant = {
   id: "kynologia" | "artystyczne" | "rozwojowe";
   label: string;
   heading: string;
+  link: string;
   highlight: string;
   descriptions: string[];
   image: string;
@@ -14,6 +15,7 @@ const WORKSHOP_VARIANTS: WorkshopVariant[] = [
     id: "kynologia",
     label: "Kynologiczne",
     heading: "Jesteśmy miejscem przyjaznym dla",
+    link: "/warsztaty-krynologiczne",
     highlight: "zwierząt!",
     descriptions: [
       "Również tych, które przyjeżdżają z misją ",
@@ -27,6 +29,7 @@ const WORKSHOP_VARIANTS: WorkshopVariant[] = [
     id: "artystyczne",
     label: "Artystyczne i Twórcze",
     heading: "Twórz z serca, wśród drzew,",
+    link: "/warsztaty-artystyczne",
     highlight: "w zgodzie z naturą!",
     descriptions: [
       "Jeśli szukasz miejsca, które wspiera twórczość, luz i autentyczną ekspresję ",
@@ -40,6 +43,7 @@ const WORKSHOP_VARIANTS: WorkshopVariant[] = [
     id: "rozwojowe",
     label: "Rozwojowe i Terapeutyczne",
     heading: "Nasza przestrzeń \nsprzyja głębokiej",
+    link: "/warsztaty-krynologiczne",
     highlight: "\npracy wewnętrznej!",
     descriptions: [
       "W otoczeniu ciszy, zieleni i z dala od codziennego zgiełku ",
@@ -83,7 +87,7 @@ export default function Workshops() {
   }, []);
 
   return (
-    <section className="bg-brand-white-125 px-[40px] py-16" id="workshops">
+    <section className="bg-brand-white-125 px-[40px] py-16" id="workshops" style={{ backgroundImage: 'url("/images/backgrounds/pattern_warsztaty_main.png")', backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" }}>
       <div className="mx-auto flex max-w-[var(--container-max-width)] flex-col gap-10">
         <div className="text-center">
           <p className="mb-5 font-brand-serif font-semibold italic text-[45px] md:text-[50px] lg:text-[72px] uppercase tracking-[2px] text-brand-black-100">
@@ -93,11 +97,10 @@ export default function Workshops() {
             {WORKSHOP_VARIANTS.map((variant, index) => (
               <button
                 key={variant.id}
-                className={`pb-1 transition-all duration-200 uppercase text-[18px] lg:text-[20px] tracking-[2px] font-semibold ${
-                  activeIndex === index
-                    ? "text-brand-black-100"
-                    : "text-brand-grey-200 hover:text-brand-grey-350"
-                }`}
+                className={`pb-1 transition-all duration-200 uppercase text-[18px] lg:text-[20px] tracking-[2px] font-semibold ${activeIndex === index
+                  ? "text-brand-black-100"
+                  : "text-brand-grey-200 hover:text-brand-grey-350"
+                  }`}
                 onClick={() => handleVariantChange(index)}
               >
                 {variant.label}
@@ -108,9 +111,8 @@ export default function Workshops() {
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div
-            className={`flex flex-col gap-6 transition-opacity duration-300 items-center lg:items-start ${
-              isFading ? "opacity-0" : "opacity-100"
-            }`}
+            className={`flex flex-col gap-6 transition-opacity duration-300 items-center lg:items-start ${isFading ? "opacity-0" : "opacity-100"
+              }`}
           >
             <h2 className="font-brand-serif font-semibold italic text-[35px] md:text-[50px] lg:text-[55px] xl:text-[70px] text-brand-black-100 lg:whitespace-pre-line lg:text-left text-center">
               {activeVariant.heading}{" "}
@@ -139,7 +141,7 @@ export default function Workshops() {
                 ))}
             </div>
 
-            <button className="group inline-flex items-center gap-2 font-brand-sans font-semibold text-brand-black-100 text-[24px] underline decoration-transparent hover:decoration-brand-black-100 transition">
+            <a href={activeVariant.link} className="group inline-flex items-center gap-2 font-brand-sans font-semibold text-brand-black-100 text-[24px] underline decoration-transparent hover:decoration-brand-black-100 transition">
               Dowiedz się więcej!{" "}
               <img
                 src="/icons/arrow-corner.svg"
@@ -147,12 +149,11 @@ export default function Workshops() {
                 className="w-4 h-4 group-hover:-rotate-45 transition-transform"
                 style={{ filter: "brightness(0) saturate(100%)" }}
               />
-            </button>
+            </a>
           </div>
           <div
-            className={`h-auto overflow-hidden transition-opacity duration-300 flex justify-center lg:justify-end ${
-              isFading ? "opacity-0" : "opacity-100"
-            }`}
+            className={`h-auto overflow-hidden transition-opacity duration-300 flex justify-center lg:justify-end ${isFading ? "opacity-0" : "opacity-100"
+              }`}
           >
             <img
               src={activeVariant.image}
