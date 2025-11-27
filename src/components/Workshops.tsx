@@ -43,7 +43,7 @@ const WORKSHOP_VARIANTS: WorkshopVariant[] = [
     id: "rozwojowe",
     label: "Rozwojowe i Terapeutyczne",
     heading: "Nasza przestrzeń \nsprzyja głębokiej",
-    link: "/warsztaty-krynologiczne",
+    link: "/warsztaty-rozwojowe",
     highlight: "\npracy wewnętrznej!",
     descriptions: [
       "W otoczeniu ciszy, zieleni i z dala od codziennego zgiełku ",
