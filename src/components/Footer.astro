@@ -17,10 +17,11 @@
         <p class='text-shadow-lg'>Pomorskie, Polska</p>
         <div class='flex items-center justify-center gap-2'>
           <img src='/icons/telephone_ico.svg' alt='telephone_ico' />
-          <a
-            href='tel:+48503147366'
-            class='hover:underline duration-200 text-shadow-lg'>503 147 366</a
-          >
+            <a
+            href={Astro.url.pathname.includes('kajaki') ? 'tel:+48724745606' : 'tel:+48503147366'}
+            class='hover:underline duration-200 text-shadow-lg'>
+            {Astro.url.pathname.includes('kajaki') ? '724 745 606' : '503 147 366'}
+            </a>
         </div>
         <div class='flex items-center justify-center gap-2'>
           <img src='/icons/mail_ico.svg' alt='mail_ico' />

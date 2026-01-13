@@ -6,18 +6,16 @@ import VerticalCarousel from "../components/VerticalCarousel/VerticalCarousel";
 import WelcomeCarousel from "../components/WelcomeCarousel/WelcomeCarousel";
 import Workshops from "../components/Workshops";
 import SocialSection from "../components/SocialSection";
-import Map from "../components/Map.astro";
 import NavigationGrid from "../components/NavigationGrid.astro";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Map from "../components/Map.astro";
 ---
 
 <Layout>
   <Header variant={1} />
-  <WelcomeCarousel client:only />
+  <WelcomeCarousel client:only='react' />
   <ScrolledSection />
-  <VerticalCarousel client:only />
-  <Workshops client:only />
+  <VerticalCarousel client:only='react' />
+  <Workshops client:only='react' />
   <SocialSection client:load />
   <Map />
   <NavigationGrid />
