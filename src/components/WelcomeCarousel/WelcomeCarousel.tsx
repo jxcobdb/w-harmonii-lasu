@@ -4,6 +4,15 @@ import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "./WelcomeCarousel.css";
 
+const slidesImages = [
+  "/images/welcome-carousel/welcome-carousel-slide-1.png",
+  "/images/welcome-carousel/welcome-carousel-slide-2.png",
+  "/images/welcome-carousel/welcome-carousel-slide-3.png",
+  "/images/welcome-carousel/welcome-carousel-slide-4.png",
+  "/images/welcome-carousel/welcome-carousel-slide-5.png",
+  "/images/welcome-carousel/welcome-carousel-slide-6.png",
+];
+
 export default function WelcomeCarousel() {
   return (
     <section id="welcome-carousel" className="relative scroll-mt-[10px]">
@@ -47,12 +56,12 @@ export default function WelcomeCarousel() {
               },
             }}
           >
-            {[...Array(6)].map((_, i) => (
+            {slidesImages.map((src, i) => (
               <SwiperSlide key={i} className="">
                 <div className="md:max-w-[800px] flex items-center justify-center">
                   <img
-                    src="/images/home-welcome.png"
-                    alt="Forest Scene"
+                    src={src}
+                    alt={`Forest Scene ${i + 1}`}
                     className="w-full h-full object-contain"
                   />
                 </div>

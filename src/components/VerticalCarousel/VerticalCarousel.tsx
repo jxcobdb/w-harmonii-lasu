@@ -6,6 +6,15 @@ import "./VerticalCarousel.css";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import useScreenWidth from "../../hooks/useScreenWidth";
 
+const slideImages = [
+  "/images/vertical-carousel/vertical-carousel-slide-1.png",
+  "/images/vertical-carousel/vertical-carousel-slide-2.png",
+  "/images/vertical-carousel/vertical-carousel-slide-3.png",
+  "/images/vertical-carousel/vertical-carousel-slide-4.png",
+  "/images/vertical-carousel/vertical-carousel-slide-5.png",
+  "/images/vertical-carousel/vertical-carousel-slide-6.png",
+];
+
 export default function VerticalCardsStack() {
   const slideDescriptions = [
     "Sala warsztatowa w stodole – 60 m² drewna, wyposażona w maty, poduszki, sztalugi. Idealna na jogę, warsztaty, spotkania. Pomieści do 18 osób (joga) lub nawet 60 przy biesiadzie.",
@@ -106,10 +115,10 @@ export default function VerticalCardsStack() {
                 onSlideChange={(sw) => setActiveIndex(sw.realIndex)}
                 {...optimizeSwipeForces()}
               >
-                {[...Array(6)].map((_, i) => (
+                {slideImages.map((src, i) => (
                   <SwiperSlide key={i}>
                     <img
-                      src="/images/vertical-carousel/vertical-carousel-slide-1.png"
+                      src={src}
                       alt={`slide-${i}`}
                       className="w-[86vw] md:w-[700px] h-auto rounded-md"
                     />
