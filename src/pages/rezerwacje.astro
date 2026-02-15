@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import NavigationGrid from "../components/NavigationGrid.astro";
+import CustomCalendar from "../components/CustomCalendar";
+import IcalExpander from "ical-expander";
+
+const icsUrl =
+  "https://roomadmin.pl/ws/ics/room/25754/2bf2285529791b50aada1e2d9a1d9813208e69d7/read.ics";
+let initialEvents: { start: string; end: string; summary: string }[] = [];
+try {
+  const res = await fetch(icsUrl);
+  const icsText = await res.text();
+  const ical = new IcalExpander({ ics: icsText, maxIterations: 1000 });
+  const events = ical.between(
+    new Date(),
+    new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+  );
+  initialEvents = events.events.map((e) => ({
+    start: e.startDate.toJSDate().toISOString(),
+    end: e.endDate.toJSDate().toISOString(),
+    summary: e.summary || "Zajęte",
+  }));
+} catch (e) {
+  console.error(e);
+}
+---
+
+<Layout>
+  <section
+    class="relative overflow-hidden px-[40px] py-16 md:py-20 scroll-mt-10"
+    id="rezerwacje"
+  >
+    <video
+      class="absolute inset-0 w-full h-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      aria-hidden="true"
+    >
+      <source src="/videos/video.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-brand-black-100/50" aria-hidden="true" />
+    <div class="pt-8 relative z-10 mx-auto flex max-w-[var(--container-max-width)] flex-col gap-10">
+      <h1 class="font-brand-serif font-semibold italic text-[35px] md:text-[50px] lg:text-[55px] xl:text-[70px] text-brand-white-100 text-center">
+        Kalendarz <span class="text-brand-green-100">rezerwacji</span>
+      </h1>
+      <div class="max-w-4xl mx-auto w-full">
+        <CustomCalendar client:only="react" initialEvents={initialEvents} />
+      </div>
+    </div>
+  </section>
+  <NavigationGrid />
+</Layout>

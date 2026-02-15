@@ -9,7 +9,7 @@ const locations = [
   {
     title: "rezerwacja",
     image: "/images/navbar/rezerwacja.png",
-    href: "/rezerwacja",
+    href: "/rezerwacje",
   },
   {
     title: "lokalizacja",
@@ -82,7 +82,7 @@ export default function Navbar() {
         >
           {!isOpen && (
             <a
-              href="/"
+              href="/rezerwacje"
               className="flex items-center gap-2 duration-300 hover:scale-110"
             >
               <p className="hidden md:block uppercase text-brand-white-100 font-brand-sans font-semibold tracking-[2px] text-[13px] leading-none">
@@ -97,7 +97,10 @@ export default function Navbar() {
           )}
         </div>
 
-        <a href="/" className="justify-self-center inline-flex duration-300 hover:scale-110">
+        <a
+          href="/"
+          className="justify-self-center inline-flex duration-300 hover:scale-110"
+        >
           <img
             src="/icons/brand-logo.svg"
             alt="Logo"
